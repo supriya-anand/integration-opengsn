@@ -19,27 +19,27 @@ ___
 Deploy and verify the contract. This step has been donw with Rinkeby network so you may reuse the contracts. If you choose to deploy your own contract, you need to setup the network in [hardhat.config.js](./hardhat.config.js), and then setup the deployed address in [address.js](./scripts/address.js).
 
 ```bash
-npx hardhat run scripts/deploy.js --network rinkeby
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 ___
 ### Verify Counter
-Optionally verify the `Counter` contract ([example](https://rinkeby.etherscan.io/address/0x566B67A276f1a5E8148970e2141ad08F6078B0a3#code)).
+Optionally verify the `Counter` contract ([example](https://goerli.etherscan.io/address/0x566B67A276f1a5E8148970e2141ad08F6078B0a3#code)).
 ```
 # The forwarder's address is passed in as an argument
-npx hardhat verify --network rinkeby \
+npx hardhat verify --network goerli \
   0x566B67A276f1a5E8148970e2141ad08F6078B0a3 \
   0x83A54884bE4657706785D7309cf46B58FE5f6e8a
 ```
 
 ___
  ### Deploy Whitelist Paymaster
- Similar to the main contract, we deploy the custom paymaster contract and verify it. The whitelist paymaster has been deployed to Rinkeby [here](https://rinkeby.etherscan.io/address/0x8Edb738326d9cb48d8971be32d4E724C0A11d1f4#code)). If you want to re-deploy your own instance, remember to update [address.js](./scripts/address.js).
+ Similar to the main contract, we deploy the custom paymaster contract and verify it. The whitelist paymaster has been deployed to goerli [here](https://goerli.etherscan.io/address/0x8Edb738326d9cb48d8971be32d4E724C0A11d1f4#code)). If you want to re-deploy your own instance, remember to update [address.js](./scripts/address.js).
  ```bash
  # deployed to 0x8Edb738326d9cb48d8971be32d4E724C0A11d1f4
- npx hardhat run scripts/deploy_whitelist_paymaster.js --network rinkeby
+ npx hardhat run scripts/deploy_whitelist_paymaster.js --network goerli
 
- npx hardhat verify --network rinkeby \
+ npx hardhat verify --network goerli \
    0x8Edb738326d9cb48d8971be32d4E724C0A11d1f4
  ```
 

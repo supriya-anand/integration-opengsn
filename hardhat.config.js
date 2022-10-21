@@ -14,8 +14,6 @@ task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
   }
 });
 
-// INFURA_URL = 'https://goerli.infura.io/v3/0f18af40c18d442688cb8b81b2558d0b';
-// ADMIN_KEY = 'e7df724481514fee79f04bd73b29b0be86fd31297213506d3b2ddbd29ef24d44';
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 
@@ -29,7 +27,7 @@ module.exports = {
       url: 'HTTP://127.0.0.1:8545',
       network_id: '1337',
     },
-    rinkeby: {
+    goerli: {
       chainId: 5,
       url: process.env.INFURA_URL,
       from: process.env.ADMIN_KEY,
